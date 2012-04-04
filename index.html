@@ -1,0 +1,153 @@
+<!doctype>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>DnD.js - Simple HTML5 Drag and Drop</title>
+        <link rel=stylesheet href=css/normalize.css />
+        <link rel=stylesheet href=css/main.css />
+    </head>
+
+    <body>
+        <div id=wrap>
+            <header id=headline>
+                <hgroup>
+                <h1>DragnDrop.js</h1>
+                <h2>Simple HTML5 Drag and Drop</h2>
+                </hgroup>
+            </header>
+
+            <article id=showcase>
+                <div id=dropping-area>Drop some files here.</div>
+                <p class=tweet><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pascalprecht.github.com/DnD.js" data-count="horizontal">Tweet</a>
+                <div id=dropped-files>
+                    <label>Dropped files:</label>
+                    <p><i>No files dropped, yet.</i></p>
+                </div>
+            </article>
+
+            <!-- <article id=introduction>
+            <p><b>DnD.js</b> is a minimalist <strong>JavaScript framework for making HTML5 Drag and Drop fun again</strong>. 
+            DnD.js is open source software and released under the MIT license.
+            </article> -->
+
+
+            <article id=installation>
+                <header>
+                    <h1>Installation</h1>
+                </header>
+
+                <p>You can either <a href=https://github.com/PascalPrecht/DnD.js/zipball/v.0.1>download</a> 
+                the latest version or <strong>clone</strong> the public <a href=https://github.com/PascalPrecht/DnD.js/>GitHub repository</a>.
+                To clone the GitHub repository, just use the following git command in your terminal:
+
+                <pre><code>git clone https://github.com/PascalPrecht/DnD.js.git</code></pre>
+
+                <p>After that you just have to include the <b>dnd.js</b> script:
+
+                <pre><code>&lt;script src=path/to/dnd.js&gt;&lt;/script&gt;</code></pre>
+
+                <p><b>Thats all!</b> You're ready to rock now!
+            </article>
+
+            <article>
+                <header>
+                    <h1>How to use it</h1>
+                </header>
+
+                <p>DnD.js provides a very easy to use API. All you have to do is to answer yourself these two questions:
+                <ol>
+                    <li><strong>Where</strong> do I want to have this cool drag and drop feature?
+                    <li><strong>What</strong> should happen during the drag and drop?
+                </ol>
+                <p>Got the answers? All right, so just do it!
+
+                <section>
+                    <header>
+                        <h1><code>DnD.on(selector, config)</code></h1>
+                    </header>
+
+                    <p>The <b><code>on()</code></b> method makes your dreams come true. There is nothing more you need for fancy
+                    drag and drop. Just pass a valid query selector and a config object, to tell DnD.js what
+                    should happen during the drag and drop.
+
+                    <p>Here is an example:
+
+                    <pre><code>
+DnD.on('#drop-area', {
+    'over': function (element) {
+        /* do something with element here */
+    },
+    'drop': function (files, element) {
+        /* Dropped! */
+    }
+});
+                    </code></pre>
+
+                    <p>You can specify your app's behavior by defining callbacks for the following events:
+
+                    <dl>
+                        <dt>'enter':</dt>
+                        <dd>Will be called when entering the Drag and Drop area with a grabbed (or more) file(s).
+                        You have access to the queried element.</dd>
+                        <dt>'over':</dt>
+                        <dd>Will be called while dragging a file (or more) over the Drag and Drop area.
+                        You have access to the queried element.</dd>
+                        <dt>'leave':</dt>
+                        <dd>Will be called when leaving the Drag and Drop area with the grabbed (or more) file(s).
+                        You have access to the queried element.</dd>
+                        <dt>'drop':</dt>
+                        <dd>Will be called after the grabbed file or (files) is dropped.
+                        You have access to the queried element and the file (or files) being dropped into the Drag and
+                        Drop area.</dd>
+                    </dl>
+
+                    <p>Each of these callbacks is optional.
+                </section>
+            </article>
+            <article id=support>
+                <header>
+                    <h1>Support</h1>
+                </header>
+
+                <p>DnD.js works in the latest version of <b>Mozilla Firefox</b>, <b>Google Chrome</b> and <b>Safari</b>.
+            </article>
+
+
+
+            <footer>
+            <figure>
+            <a href="http://twitter.com/#!/PascalPrecht"><img alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a>
+                <figcaption>
+                <p>Made with <span class=love><3</span> for the web by <a href=http://twitter.com/PascalPrecht/>Pascal Precht</a></p>
+                </figcaption>
+            </figure>
+
+            </footer>
+        </div>
+        <script src="//platform.twitter.com/widgets.js"></script>
+        <script src=js/dnd.js></script>
+        <script>
+            DnD.on('#dropping-area', {
+                'enter': function (el) {
+                    el.classList.add('dropping');
+                    el.firstChild.nodeValue = 'Allright, drop it!';
+                    console.dir(el);
+                },
+                'leave': function (el) {
+                    el.classList.remove('dropping');
+                    el.firstChild.nodeValue = 'Drop some files here.';
+                },
+                'drop': function (files, el) {
+                    el.classList.remove('dropping');
+                    el.firstChild.nodeValue = 'Drop some files here.';
+                    var names = [];
+                    [].forEach.call(files, function (file, i) {
+                        names.push(file.name + ' (' + file.size + ' bytes)');
+                        console.log(file);
+                    });
+                    document.querySelector('#dropped-files p i').firstChild.nodeValue = names.join(', ');
+                }
+            });
+        </script>
+    </body>
+</html>

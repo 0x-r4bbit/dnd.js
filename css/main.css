@@ -1,0 +1,54 @@
+body { font-family: Verdana; }
+
+#wrap { margin: 0 auto; width: 760px; }
+#headline { margin-top: 5px; margin-bottom: 50px; }
+#headline h1 { font-size: 60px; font-weight: normal; margin-bottom: 0; }
+#headline h2 { font-size: 18px; font-weight: normal; display: inline; margin-left: 133px; color: #333; }
+
+#dropping-area {
+    padding: 120px 50px 120px 50px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+    border: dashed 8px #999;
+    text-align: center;
+    font-size: 30px;
+    color: #999;
+}
+
+#showcase { margin-bottom: 50px; }
+#showcase p.tweet { text-align: right; margin-bottom: 0px; }
+#dropped-files p { margin-top: 5px; }
+article { margin-bottom: 30px; }
+article header h1 { border-bottom: 1px solid #999; padding-bottom: 5px; font-weight: normal; }
+
+footer { text-align: center; }
+footer img {
+    height: 100px; 
+    width: 100px; 
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+
+p { font-size: 14px; }
+a { color: #000; }
+pre {
+    background-color: #555;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+pre code { font-size: 14px; color: #FFF; text-shadow: 1px 1px 0px #333; }
+li { font-size: 14px; }
+dl dt { margin-bottom: 5px; }
+dl dd { font-size: 14px; margin-bottom: 10px; }
+
+.love { color: red; font-weight: bold; }
