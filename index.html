@@ -2,22 +2,24 @@
 <html>
     <head>
         <meta charset=utf-8>
-        <title>DnD.js - Simple HTML5 Drag and Drop</title>
-        <link rel=stylesheet href=css/normalize.css />
-        <link rel=stylesheet href=css/main.css />
+        <title>DnD.js - Simple HTML5 Drag and Drop by @PascalPrecht</title>
+        <link rel=stylesheet href=css/normalize.css>
+        <link rel=stylesheet href=css/main.css>
     </head>
 
     <body>
+        <a href="http://github.com/PascalPrecht/DnD.js/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
         <div id=wrap>
             <header id=headline>
                 <hgroup>
-                <h1>DragnDrop.js</h1>
-                <h2>Simple HTML5 Drag and Drop</h2>
+                <h1>DragnDrop.js
+                <h2>Simple HTML5 Drag and Drop
                 </hgroup>
             </header>
 
             <article id=showcase>
-                <div id=dropping-area>Drop some files here.</div>
+                <div id=dropping-area>Drag some files here.</div>
+
                 <p class=tweet><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pascalprecht.github.com/DnD.js" data-count="horizontal">Tweet</a>
                 <div id=dropped-files>
                     <label>Dropped files:</label>
@@ -25,15 +27,9 @@
                 </div>
             </article>
 
-            <!-- <article id=introduction>
-            <p><b>DnD.js</b> is a minimalist <strong>JavaScript framework for making HTML5 Drag and Drop fun again</strong>. 
-            DnD.js is open source software and released under the MIT license.
-            </article> -->
-
-
             <article id=installation>
                 <header>
-                    <h1>Installation</h1>
+                    <h1>Installation
                 </header>
 
                 <p>You can either <a href=https://github.com/PascalPrecht/DnD.js/zipball/v.0.1>download</a> 
@@ -112,8 +108,6 @@ DnD.on('#drop-area', {
                 <p>DnD.js works in the latest version of <b>Mozilla Firefox</b>, <b>Google Chrome</b> and <b>Safari</b>.
             </article>
 
-
-
             <footer>
             <figure>
             <a href="http://twitter.com/#!/PascalPrecht"><img alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a>
@@ -129,17 +123,13 @@ DnD.on('#drop-area', {
         <script>
             DnD.on('#dropping-area', {
                 'enter': function (el) {
-                    el.classList.add('dropping');
-                    el.firstChild.nodeValue = 'Allright, drop it!';
-                    console.dir(el);
+                    el.firstChild.nodeValue = 'Allright, drop\'em!';
                 },
                 'leave': function (el) {
-                    el.classList.remove('dropping');
-                    el.firstChild.nodeValue = 'Drop some files here.';
+                    el.firstChild.nodeValue = 'Drag some files here.';
                 },
                 'drop': function (files, el) {
-                    el.classList.remove('dropping');
-                    el.firstChild.nodeValue = 'Drop some files here.';
+                    el.firstChild.nodeValue = 'Drag some files here.';
                     var names = [];
                     [].forEach.call(files, function (file, i) {
                         names.push(file.name + ' (' + file.size + ' bytes)');
