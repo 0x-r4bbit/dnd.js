@@ -64,6 +64,6 @@ Will be called after the grabbed file or (files) is dropped. You have access to 
 
 Each of these callbacks is optional.
 
-#### Support
+## Support
 
 DnD.js works in the latest version of Mozilla Firefox, Google Chrome and Safari.
