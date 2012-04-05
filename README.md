@@ -6,11 +6,15 @@ A minimalist JavaScript framework for simple HTML5 Drag and Drop
 
 You can either download the latest version or clone the public GitHub repository. To clone the GitHub repository, just use the following git command in your terminal:
 
-<code>git clone https://github.com/PascalPrecht/DnD.js.git</code>
+```
+git clone https://github.com/PascalPrecht/DnD.js.git
+```
 
 After that you just have to include the dnd.js script:
 
-<code><script src=path/to/dnd.js></script></code>
+```
+<script src=path/to/dnd.js></script>
+```
 
 Thats all! You're ready to rock now!
 
