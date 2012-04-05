@@ -33,7 +33,7 @@ The on() method makes your dreams come true. There is nothing more you need for 
 
 Here is an example:
 
-<code>
+```
 DnD.on('#drop-area', {
     'over': function (element) {
         /* do something with element here */
@@ -42,10 +42,28 @@ DnD.on('#drop-area', {
         /* Dropped! */
     }
 });
-</code>
+```
 
 You can specify your app's behavior by defining callbacks for the following events:
 
 #### 'enter':
 
 Will be called when entering the Drag and Drop area with a grabbed (or more) file(s). You have access to the queried element.
+
+#### 'over':
+
+Will be called while dragging a file (or more) over the Drag and Drop area. You have access to the queried element.
+
+#### 'leave':
+
+Will be called when leaving the Drag and Drop area with the grabbed (or more) file(s). You have access to the queried element.
+
+#### 'drop':
+
+Will be called after the grabbed file or (files) is dropped. You have access to the queried element and the file (or files) being dropped into the Drag and Drop area.
+
+Each of these callbacks is optional.
+
+#### Support
+
+DnD.js works in the latest version of Mozilla Firefox, Google Chrome and Safari.
