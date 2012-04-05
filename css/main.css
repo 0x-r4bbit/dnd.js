@@ -20,12 +20,12 @@ body { font-family: Verdana; }
 
 #showcase { margin-bottom: 50px; }
 #showcase p.tweet { text-align: right; margin-bottom: 0px; }
+#dropped-files { margin-top: 50px; }
 #dropped-files p { margin-top: 5px; }
 article { margin-bottom: 30px; }
 article header h1 { border-bottom: 1px solid #999; padding-bottom: 5px; font-weight: normal; }
-
 footer { text-align: center; }
-footer img {
+footer #portrait {
     height: 100px; 
     width: 100px; 
     -webkit-border-radius: 5px;
@@ -34,7 +34,6 @@ footer img {
          -o-border-radius: 5px;
             border-radius: 5px;
 }
-
 p { font-size: 14px; }
 a { color: #000; }
 pre {
