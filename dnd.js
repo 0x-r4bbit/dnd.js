@@ -1,35 +1,31 @@
 ;window.dnd = Object.create({
-  
-  on: function( expression, config ) {
-    
-    with( document.querySelector( expression ) ) {
-      
-      addEventListener( 'dragenter', function( event ) {
-        event.stopPropagation()
-        event.preventDefault()
-        config.enter ? config.enter( element ) : 0
-      }, false )
-      
-      addEventListener( 'dragover',  function( event ) {
-        event.stopPropagation()
-        event.preventDefault()
-        config.over ? config.over( element ) : 0
-      }, false )
-      
-      addEventListener( 'dragleave', function( event ) {
-        event.stopPropagation()
-        event.preventDefault()
-        config.leave ? config.leave( element ) : 0
-      }, false )
-      
-      addEventListener( 'drop', function( event ) {
-        event.stopPropagation()
-        event.preventDefault()
-        config.drop ? config.drop( event.dataTransfer.files, element ) : 0
-      }, false )
-      
-    }
-    
+
+    on: function( expression, config ) {
+
+        var el = document.querySelector(expression);
+
+        el.addEventListener('dragenter', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.enter ? config.enter(el) : 0;
+        }, false);
+
+        el.addEventListener('dragover',  function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.over ? config.over(el) : 0;
+        }, false);
+
+        el.addEventListener('dragleave', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.leave ? config.leave(el) : 0;
+        }, false );
+
+        el.addEventListener('drop', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.drop ? config.drop(e.dataTransfer.files, el) : 0;
+        }, false);
   }
-  
 });
