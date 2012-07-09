@@ -8,7 +8,6 @@
     </head>
 
     <body>
-        <a href="http://github.com/PascalPrecht/DnD.js/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
         <div id=wrap>
             <header id=headline>
                 <hgroup>
@@ -52,7 +51,7 @@
                     <h1>How to use it</h1>
                 </header>
 
-                <p>DnD.js provides a very easy to use API. All you have to do is to answer yourself these two questions:
+                <p>dnd.js provides a very easy to use API. All you have to do is to answer yourself these two questions:
                 <ol>
                     <li><strong>Where</strong> do I want to have this cool drag and drop feature?
                     <li><strong>What</strong> should happen during the drag and drop?
@@ -61,17 +60,17 @@
 
                 <section>
                     <header>
-                        <h1><code>DnD.on(selector, config)</code></h1>
+                        <h1><code>dnd.on(selector, config)</code></h1>
                     </header>
 
                     <p>The <b><code>on()</code></b> method makes your dreams come true. There is nothing more you need for fancy
-                    drag and drop. Just pass a valid query selector and a config object, to tell DnD.js what
+                    drag and drop. Just pass a valid query selector and a config object, to tell dnd.js what
                     should happen during the drag and drop.
 
                     <p>Here is an example:
 
                     <pre><code>
-DnD.on('#drop-area', {
+dnd.on('#drop-area', {
     'over': function (element) {
         /* do something with element here */
     },
@@ -107,7 +106,7 @@ DnD.on('#drop-area', {
                     <h1>Support</h1>
                 </header>
 
-                <p>DnD.js works in the latest version of <b>Mozilla Firefox</b>, <b>Google Chrome</b> and <b>Safari</b>.
+                <p>dnd.js works in the latest version of <b>Mozilla Firefox</b>, <b>Google Chrome</b> and <b>Safari</b>.
             </article>
 
             <footer>
@@ -118,7 +117,7 @@ DnD.on('#drop-area', {
         <script src="//platform.twitter.com/widgets.js"></script>
         <script src=js/dnd.js></script>
         <script>
-            DnD.on('#dropping-area', {
+            dnd.on('#dropping-area', {
                 'enter': function (el) {
                     el.firstChild.nodeValue = 'Allright, drop\'em!';
                 },
