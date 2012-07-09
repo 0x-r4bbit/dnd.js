@@ -1,1 +1,31 @@
-window.dnd=Object.create({on:function(c,b){with(document.querySelector(c)){addEventListener("dragenter",function(a){a.stopPropagation();a.preventDefault();b.enter&&b.enter(element)},false);addEventListener("dragover",function(a){a.stopPropagation();a.preventDefault();b.over&&b.over(element)},false);addEventListener("dragleave",function(a){a.stopPropagation();a.preventDefault();b.leave&&b.leave(element)},false);addEventListener("drop",function(a){a.stopPropagation();a.preventDefault();b.drop&&b.drop(a.dataTransfer.files,element)},false)}}});
+;window.dnd = Object.create({
+
+    on: function( expression, config ) {
+
+        var el = document.querySelector(expression);
+
+        el.addEventListener('dragenter', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.enter ? config.enter(el) : 0;
+        }, false);
+
+        el.addEventListener('dragover',  function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.over ? config.over(el) : 0;
+        }, false);
+
+        el.addEventListener('dragleave', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.leave ? config.leave(el) : 0;
+        }, false );
+
+        el.addEventListener('drop', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            config.drop ? config.drop(e.dataTransfer.files, el) : 0;
+        }, false);
+  }
+});
