@@ -27,14 +27,14 @@ DnD.js provides a very easy to use API. All you have to do is to answer yourself
 
 Got the answers? All right, so just do it!
 
-### DnD.on(selector, config)
+### dnd.on(selector, config)
 
 The on() method makes your dreams come true. There is nothing more you need for fancy drag and drop. Just pass a valid query selector and a config object, to tell DnD.js what should happen during the drag and drop.
 
 Here is an example:
 
 ```
-DnD.on('#drop-area', {
+dnd.on('#drop-area', {
     'over': function (element) {
         /* do something with element here */
     },
