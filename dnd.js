@@ -7,25 +7,25 @@
         el.addEventListener('dragenter', function(e) {
             e.stopPropagation();
             e.preventDefault();
-            config.enter ? config.enter(el) : 0;
+            config.enter ? config.enter(this) : 0;
         }, false);
 
         el.addEventListener('dragover',  function(e) {
             e.stopPropagation();
             e.preventDefault();
-            config.over ? config.over(el) : 0;
+            config.over ? config.over(this) : 0;
         }, false);
 
         el.addEventListener('dragleave', function(e) {
             e.stopPropagation();
             e.preventDefault();
-            config.leave ? config.leave(el) : 0;
+            config.leave ? config.leave(this) : 0;
         }, false );
 
         el.addEventListener('drop', function(e) {
             e.stopPropagation();
             e.preventDefault();
-            config.drop ? config.drop(e.dataTransfer.files, el) : 0;
+            config.drop ? config.drop(e.dataTransfer.files, this) : 0;
         }, false);
   }
 });
