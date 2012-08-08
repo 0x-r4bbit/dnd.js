@@ -1,15 +1,101 @@
 <!doctype>
 <html>
-    <head>
-        <meta charset=utf-8>
-        <title>DnD.js - Simple HTML5 Drag and Drop by @PascalPrecht</title>
-        <link rel=stylesheet href=css/normalize.css>
-        <link rel=stylesheet href=css/main.css>
-    </head>
+<head>
+  <meta charset=utf-8>
+  <title>DnD.js - Simple HTML5 Drag and Drop by @PascalPrecht</title>
+  <link rel=stylesheet href=css/normalize.css>
+  <link rel=stylesheet href=css/main.css>
+</head>
 
-    <body>
-        <div id=wrap>
-            <header id=headline>
+<body>
+  <header>
+    <hgroup>
+      <h1>DnD.js</h1>
+      <h2>Simple HTML5 Drag and Drop</h1>
+    </hgroup>
+  </header>
+
+  <section>
+    <header>
+      <h1>Intoduction</h1>
+    </header>
+
+    <p>DnD.js is a minimalist JavaScript Framework for simple HTML5 Drag and Drop. 
+    It uses the native HTML5 Drag and Drop API, which is supported by all modern browsers.
+    There's no jQuery or Plugin you need, to do some fancy Drag and Drop in your
+    web application.
+
+    <h2>Why HTML5 Drag and Drop?</h2>
+
+    <p>There are many reasons why to use Drag and Drop in a web application. With Drag and Drop
+    you give your users the opportunity to import files and data in many different cases. This could
+    be an upload app or a web player. But that's not all. Importing files is just one way to use
+    Drag and Drop. When using Drag and Drop <strong>within</strong> the browser, you give your users 
+    a much better experience when it comes to sorting things and stuff like that.
+
+    <h2>What makes DnD.js so awesome?</h2>
+
+    <p>Simplicity. DnD.js is a lightweight library. So what das <q>lightweight</q> in this case mean?
+    The reason why DnD.js is such a small library, is, that does nothing more then adding
+    the drag and drop eventlisteners to the DOM Elements you specify. You still have full control
+    and access to everything you need.
+
+    <h2>Hmm.. Can I haz examples?</h2>
+
+    <p><a href="#examples" title=Examples>Fo sho!</a>
+
+    <h2>Whoa! You got me! Where can I download?</h2>
+
+    <p>Cheers, just go do the <a href="#downloads" title=Downloads>downloads section</a>.
+  </section>
+
+  <section>
+    <header>
+      <h1 id=examples>Examples</h1>
+    </header>
+
+    <h2>Droparea</h2>
+    <div class=showcase>
+      <div class=droparea></div>
+    </div>
+
+    <h2>Draggable elements</h2>
+    <div class=showcase></div>
+
+    <h2>Drag out to download</h2>
+    <div class=showcase></div>
+  </section>
+
+  <section>
+    <header>
+      <h1 id=documentation>Documentation</h1>
+    </header>
+  </section>
+
+  <section>
+    <header>
+      <h1 id=changelog>Change Log</h1>
+    </header>
+  </section>
+
+  <section>
+    <header>
+      <h1 id=downloads>Downloads</h1>
+    </header>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <header id=headline>
                 <hgroup>
                 <h1>DragnDrop.js
                 <h2>Simple HTML5 Drag and Drop
@@ -113,28 +199,6 @@ dnd.on('#drop-area', {
             <footer>
             <p><a href="http://twitter.com/#!/PascalPrecht"><img id=portrait alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a></p> 
             <p>Made with <span class=love><3</span> for the web by <a href=http://twitter.com/PascalPrecht/>@PascalPrecht</a></p>
-</footer>
-        </div>
-        <script src="//platform.twitter.com/widgets.js"></script>
-        <script src=js/dnd.js></script>
-        <script>
-            dnd.on('#dropping-area', {
-                'enter': function (el) {
-                    el.firstChild.nodeValue = 'Allright, drop\'em!';
-                },
-                'leave': function (el) {
-                    el.firstChild.nodeValue = 'Drag some files here.';
-                },
-                'drop': function (files, el) {
-                    el.firstChild.nodeValue = 'Drag some files here.';
-                    var names = [];
-                    [].forEach.call(files, function (file, i) {
-                        names.push(file.name + ' (' + file.size + ' bytes)');
-                        console.log(file);
-                    });
-                    document.querySelector('#dropped-files p i').firstChild.nodeValue = names.join(', ');
-                }
-            });
-        </script>
+            </footer>-->
     </body>
 </html>
