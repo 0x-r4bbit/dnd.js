@@ -56,20 +56,50 @@
 
     <h2>Droparea</h2>
     <div class=showcase>
-      <div class=droparea></div>
+      <div class=droparea>
+        <span>Drop some files here!</span> 
+      </div>
     </div>
 
     <h2>Draggable elements</h2>
-    <div class=showcase></div>
+    <div class=showcase>
+      <div class=column draggable=true>Drag</div>
+      <div class=column draggable=true>and</div>
+      <div class=column draggable=true>Drop</div>
+    </div>
 
     <h2>Drag out to download</h2>
-    <div class=showcase></div>
+    <div class=showcase>
+      <a href="#">I'm a file</a>
+    </div>
   </section>
 
   <section>
     <header>
       <h1 id=documentation>Documentation</h1>
     </header>
+
+    <h2>Basic Usage</h2>
+
+    <p>Using DnD.js is bloody easy. Just decide on which elements the drag and drop events should be attached,
+    then specify the different callbacks. Here's an example:
+
+    <pre><code>
+    dnd.on('.droparea', {
+      'enter': function (element, event) {
+        console.log('Entered drop area...')
+      },
+      'leave': function (element, event) {
+        console.log('Left drop area...');
+      },
+      'drop': function (data, element, event) {
+        console.log('Dropped!');
+      }
+    });
+    </code></pre>
+
+    <h2>API</h2>
+    <code>dnd.on(querySelector, options)</code>
   </section>
 
   <section>
@@ -84,6 +114,15 @@
     </header>
   </section>
 
+  <footer>
+    <a href="http://twitter.com/#!/PascalPrecht"><img id=portrait alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a>
+    <p>Made with <strong><3</strong> for the web by <a href=http://twitter.com/PascalPrecht/>@PascalPrecht</a></p>
+  </footer>
+
+  <script src=js/dnd.js></script>
+  <script src=js/app.js></script>
+</body>
+</html>
 
 
 
@@ -91,16 +130,7 @@
 
 
 
-
-
-
-
-            <!-- <header id=headline>
-                <hgroup>
-                <h1>DragnDrop.js
-                <h2>Simple HTML5 Drag and Drop
-                </hgroup>
-            </header>
+<!--
 
             <article id=showcase>
                 <div id=dropping-area>Drag some files here.</div>
@@ -196,9 +226,3 @@ dnd.on('#drop-area', {
                 <p>For more information, checkout <a href=http://caniuse.com/#feat=dragndrop>this</a>.
             </article>
 
-            <footer>
-            <p><a href="http://twitter.com/#!/PascalPrecht"><img id=portrait alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a></p> 
-            <p>Made with <span class=love><3</span> for the web by <a href=http://twitter.com/PascalPrecht/>@PascalPrecht</a></p>
-            </footer>-->
-    </body>
-</html>
