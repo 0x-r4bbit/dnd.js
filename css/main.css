@@ -29,3 +29,10 @@
   text-align: center;
   cursor: move;
 }
+.column.dropping {
+  border: dashed 2px #666;
+}
+.download-file {
+  padding: 10px;
+  background: #555;
+}
