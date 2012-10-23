@@ -1,23 +1,6 @@
 body {
-  background: #CCC;
   font: normal 14px/16px "Arial", sans-serif;
 }
-
-/*hgroup {
-  color: #222;
-  text-shadow: 0 4px 0 rgba(255, 255, 255, .5);
-}
-
-hgroup h1 {
-  margin: 0;
-  font-size: 100px;
-  line-height: 100px;
-}
-
-hgroup h2 {
-  font-size: 30px;
-  text-shadow: 0 2px 0 rgba(255, 255, 255, .5);
-}*/
 
 .droparea {
   border: 3px dashed #000;

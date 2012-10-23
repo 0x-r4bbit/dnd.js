@@ -44,9 +44,6 @@
 
     <p><a href="#examples" title=Examples>Fo sho!</a>
 
-    <h2>Whoa! You got me! Where can I download?</h2>
-
-    <p>Cheers, just go do the <a href="#downloads" title=Downloads>downloads section</a>.
   </section>
 
   <section>
@@ -122,49 +119,27 @@ dnd.on('.column', {
     </div>
     <h2>Drag out to download</h2>
     <div class=showcase>
-      <a href="example.txt" class="download-file" draggable="true" data-downloadurl="application/octet-stream:example.txt:http://pascalprecht.github.com/example.txt">I'm a file</a>
+      <a href="example.txt" class="download-file" draggable="true" data-downloadurl="application/octet-stream:example.txt:http://localhost:8888/example.txt">I'm a file</a>
+    </div>
+
+    <div class="code">
+      <h3>Code</h3>
+      <pre><code>
+if (typeof(file.dataset) === 'undefined') {
+  fileDetails = file.getAttribute('data-downloadurl');
+} else {
+  fileDetails = file.dataset.downloadurl;
+}
+
+dnd.on('.download-file', {
+  'start': function (el, e) {
+    e.dataTransfer.setData('DownloadURL', fileDetails);
+  }
+});
+      </code></pre>
     </div>
   </section>
 
-  <section>
-    <header>
-      <h1 id=documentation>Documentation</h1>
-    </header>
-
-    <h2>Basic Usage</h2>
-
-    <p>Using DnD.js is bloody easy. Just decide on which elements the drag and drop events should be attached,
-    then specify the different callbacks. Here's an example:
-
-    <pre><code>
-    dnd.on('.droparea', {
-      'enter': function (element, event) {
-        console.log('Entered drop area...')
-      },
-      'leave': function (element, event) {
-        console.log('Left drop area...');
-      },
-      'drop': function (data, element, event) {
-        console.log('Dropped!');
-      }
-    });
-    </code></pre>
-
-    <h2>API</h2>
-    <code>dnd.on(querySelector, options)</code>
-  </section>
-
-  <section>
-    <header>
-      <h1 id=changelog>Change Log</h1>
-    </header>
-  </section>
-
-  <section>
-    <header>
-      <h1 id=downloads>Downloads</h1>
-    </header>
-  </section>
 
   <footer>
     <a href="http://twitter.com/#!/PascalPrecht"><img id=portrait alt="Photo of Pascal Precht" src="http://www.gravatar.com/avatar/447b70556cb99e6dfcfea71942a3e68e?s=150" /></a>
