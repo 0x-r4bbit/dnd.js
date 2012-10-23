@@ -20,7 +20,7 @@ dnd.on('.droparea', {
   }
 });
 
-dnd.on('.column', {
+dnd.on('.box', {
   'start': function (el, e) {
     el.style.opacity = '0.4';
 
